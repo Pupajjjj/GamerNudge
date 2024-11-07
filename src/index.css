@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white antialiased touch-manipulation;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow-auto {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Modal animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal-enter {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Custom color overrides */
+.bg-accent {
+  @apply bg-[#00FF41];
+}
+
+.text-accent {
+  @apply text-[#00FF41];
+}
+
+.hover\:bg-accent-hover:hover {
+  @apply hover:bg-[#00CC33];
+}
+
+.border-accent {
+  @apply border-[#00FF41];
+}
+
+.ring-accent {
+  @apply ring-[#00FF41];
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-[#00FF41] text-black font-medium py-3 px-4 rounded-xl hover:bg-[#00CC33] transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-[#1C1C1E] text-[#00FF41] font-medium py-3 px-4 rounded-xl hover:bg-[#2C2C2E] transition-colors border border-[#00FF41];
+}
